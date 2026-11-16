@@ -34,25 +34,8 @@ The prompt extracts the following fields:
 | `severity_level` | Complaint severity from 1 to 5 |
 | `contact_phone` | Customer's contact number or null |
 
-## 5. Project Structure
 
-```text
-Project-1/
-│
-├── README.md
-├── prompt.txt
-│
-├── examples/
-│   └── test-email-01.txt
-│
-├── outputs/
-│   └── test-output-01.json
-│
-└── screenshots/
-    └── Decode-project1.png
-```
-
-## 6. Example Input
+## 5. Example Input
 
 ```text
 Subject: WORST SERVICE EVER
@@ -60,7 +43,7 @@ Subject: WORST SERVICE EVER
 Hi, I'm Anita Gurung. I was charged twice for order C5590 and nobody has replied in 5 days. Unacceptable. Fix it today or I'm disputing with my bank. - Anita
 ```
 
-## 7. Expected JSON Output
+## 6. Expected JSON Output
 
 ```json
 {
@@ -74,17 +57,17 @@ Hi, I'm Anita Gurung. I was charged twice for order C5590 and nobody has replied
 
 *Note: The output above is an expected example. The actual output should match the response generated when testing the prompt.*
 
-## 8. Screenshot
+## 7. Screenshot
 
-![DecodeLabs Project 1](screenshots/Decode-project1.png)
+![DecodeLabs-Project 1](Decode-project1.png)
 
-## 9. Conclusion
+## 8. Conclusion
 
 This project demonstrates how clear instructions, delimiters, and few-shot examples can guide an AI model to extract structured information from customer complaint emails.
 
 It also provides practical experience in designing prompts for consistent JSON output and handling missing information.
 
-## 10. Skills Practiced
+## 9. Skills Practiced
 
 - Prompt Engineering
 - Zero-Shot and Few-Shot Prompting
