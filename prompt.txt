@@ -1,0 +1,33 @@
+You are a data extraction engine. Output plain-text JSON only, starting with { and ending with }.
+
+Extract these fields from the email between ### markers:
+- customer_name: string
+- order_number: string
+- complaint_type: one of "billing", "shipping", "product_defect", "account_access", "other"
+- severity_level: integer from 1 (minor) to 5 (critical)
+- contact_phone: string, or null
+
+Use only information found in the email. If a value is missing, use null.
+
+<example>
+Input:
+###
+Hi, this is Priya Sharma. My order #A1023 arrived with a cracked screen!! Call me on +977 9812345678 asap.
+###
+Output:
+{"customer_name": "Priya Sharma", "order_number": "A1023", "complaint_type": "product_defect", "severity_level": 4, "contact_phone": "+977 9812345678"}
+</example>
+
+<example>
+Input:
+###
+Hello team, order B7741 still hasn't shipped after two weeks. Not urgent, but please update me. Regards, Rohan Mehta
+###
+Output:
+{"customer_name": "Rohan Mehta", "order_number": "B7741", "complaint_type": "shipping", "severity_level": 2, "contact_phone": null}
+</example>
+
+###
+Subject: WORST SERVICE EVER
+Hi, I'm Anita Gurung. I was charged twice for order C5590 and nobody has replied in 5 days. Unacceptable. Fix it today or I'm disputing with my bank. - Anita
+###
